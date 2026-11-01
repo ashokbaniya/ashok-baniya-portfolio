@@ -1,11 +1,9 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').Next.config} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export', // <--- Enables static HTML export
+  // If you have image optimization issues with static export, you may also need:
   images: {
-    // No external image domains are used — all project/CV assets are served
-    // from /public. If you later host images remotely, add their domains
-    // here (or switch to `remotePatterns`).
-    unoptimized: false,
+    unoptimized: true,
   },
 };
 
